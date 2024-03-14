@@ -1,3 +1,87 @@
+// Header
+
+.header {
+    background-color: #6FB98F;
+    color: #00563F;
+}
+
 .brand {
     font-family: "Truculenta", sans-serif;
+    text-align: center;
+    font-size: 2.4em;
+    padding: 10px;
 }
+
+
+// Layout
+
+.layout {
+    text-align: center;
+}
+
+// Layout - Tool Bar
+
+.toolbar-ctn {
+    background-color: #81c79f;
+    color: #00563F;
+    height: 55px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+// Layout - Nav Bar y Travel Component
+
+.navbar-travel-ctn {
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar-ctn {
+    background-color: #81c79f;
+    color: #e7e7e7;
+    height: 350px;
+    width: 10%;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.travel-ctn {
+    background-color: #81c79f;
+    color: #e7e7e7;
+    height: 350px;
+    width: 80%;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+
+// Footer
+
+.footer {
+    background-color: #6FB98F;
+    color: #00563F;
+    padding-top: 15px;
+}
+
+.redes-sociales-ctn {
+    display: flex;
+    padding: 10px;
+}
+
+.redes-sociales-ctn a {
+    margin-right: 10px;
+    padding: 10px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: #00563F;
+    background-color: #81c79f;
+    border-radius: 12px;
+    align-items: center;
+}
+
+.redes-sociales-ctn a:hover {
+    background-color: #028763;
+    color: #e7e7e7;
+}
+

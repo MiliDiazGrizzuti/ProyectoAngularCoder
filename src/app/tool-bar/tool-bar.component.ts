@@ -6,5 +6,4 @@ import { Component } from '@angular/core';
   styleUrl: './tool-bar.component.scss'
 })
 export class ToolBarComponent {
-
 }

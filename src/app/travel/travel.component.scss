@@ -1,0 +1,28 @@
+h3 {
+    margin: 0;
+}
+
+.title {
+    padding: 15px;
+    font-size: 1.4em;
+}
+
+.subtitle {
+    padding-bottom: 20px;
+
+}
+
+.card-ctn {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card {
+    background-color: #028763;
+    color: #e7e7e7;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 1rem;
+    height: 70px;
+    width: 15%;
+}
