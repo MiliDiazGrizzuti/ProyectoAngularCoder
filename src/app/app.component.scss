@@ -1,18 +1,3 @@
-// Header
-
-.header {
-    background-color: #6FB98F;
-    color: #00563F;
-}
-
-.brand {
-    font-family: "Truculenta", sans-serif;
-    text-align: center;
-    font-size: 2.4em;
-    padding: 10px;
-}
-
-
 // Layout
 
 .layout {
@@ -22,46 +7,59 @@
 // Layout - Tool Bar
 
 .toolbar-ctn {
-    background-color: #81c79f;
     color: #00563F;
-    height: 55px;
-    margin-bottom: 25px;
-    border-radius: 15px;
     padding: 15px;
 }
 
-// Layout - Nav Bar y Travel Component
+// Layout - Nav Bar y Students Component
 
-.navbar-travel-ctn {
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.navbar-students-ctn {
     display: flex;
     justify-content: space-around;
+    position: relative;
+    overflow: hidden;
 }
 
 .navbar-ctn {
-    background-color: #81c79f;
+    background-color: #ffa34a;
     color: #e7e7e7;
-    height: 350px;
-    width: 10%;
+    width: 15%;
     border-radius: 15px;
     padding: 15px;
+    position: relative;
+    top: 50%;
+    font-size: 0.9rem;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
-.travel-ctn {
-    background-color: #81c79f;
+.students-ctn {
+    background-color: #ffa34a;
     color: #e7e7e7;
-    height: 350px;
-    width: 80%;
+    width: 70%;
     border-radius: 15px;
     padding: 15px;
+    position: relative;
+    top: 50%;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 
 // Footer
 
 .footer {
-    background-color: #6FB98F;
-    color: #00563F;
     padding-top: 15px;
+    padding-left: 15px;
 }
 
 .redes-sociales-ctn {
@@ -74,14 +72,14 @@
     padding: 10px;
     font-size: 0.9rem;
     text-decoration: none;
-    color: #00563F;
-    background-color: #81c79f;
+    color: #954900;
+    background-color: #ffa34a;
     border-radius: 12px;
     align-items: center;
 }
 
 .redes-sociales-ctn a:hover {
-    background-color: #028763;
+    background-color: #d16600;
     color: #e7e7e7;
 }
 

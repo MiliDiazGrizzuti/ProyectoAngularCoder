@@ -1,5 +1,6 @@
 h3 {
     margin: 0;
+    color: #954900;
 }
 
 .title {
@@ -9,20 +10,21 @@ h3 {
 
 .subtitle {
     padding-bottom: 20px;
-
+    color: #954900;
 }
 
 .card-ctn {
     display: flex;
     justify-content: space-evenly;
+    margin-bottom: 15px;
 }
 
 .card {
-    background-color: #028763;
+    background-color: #d16600;
     color: #e7e7e7;
     border-radius: 10px;
     padding: 15px;
     font-size: 1rem;
-    height: 70px;
+    height: 150px;
     width: 15%;
 }
