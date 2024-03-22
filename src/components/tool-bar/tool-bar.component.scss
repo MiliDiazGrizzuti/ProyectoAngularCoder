@@ -8,6 +8,105 @@
 .brand {
     font-family: "Truculenta", sans-serif;
     text-align: center;
-    font-size: 2.4em;
+    font-size: 2.7em;
     padding: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+}
+
+.btn-ctn {
+    border: none;
+}
+
+.toolbar-btn {
+    background-color: #d16600;
+    text-align: center;
+    border: none;
+    border-radius: 12px;
+    padding: 5px 11px 5px 11px;
+    margin-bottom: 10px;
+    margin-right: 13px;
+    cursor: pointer;
+    color: #6c3600;
+    font-weight: 500;
+}
+
+.toolbar-btn:hover {
+    background-color: #ffa34a;
+}
+
+// POP UP: REGISTRO
+
+.popup-ctn {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+.show-popup {
+    display: block;
+}
+
+.popup {
+    background-color: #ffc994;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    height: 70%;
+    width: 70%;
+    overflow-y: auto;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.title-popup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3px;
+}
+
+.popup input {
+    width: 100%;
+    height: 30px;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 0.9rem;
+}
+
+.popup input::placeholder {
+    font-style: italic;
+}
+
+.popup textarea {
+    height: 110px;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 0.9rem;
+}
+
+.popup textarea::placeholder {
+    font-style: italic;
+}
+
+#text-error {
+    font-style: italic;
+    color: #cc0000;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
 }
