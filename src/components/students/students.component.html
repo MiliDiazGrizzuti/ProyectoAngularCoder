@@ -9,26 +9,31 @@
     <div class="card">card 4</div>
 </div>
 
-<button (click)="mostrarListado = !mostrarListado">Ver listado de alumnos</button>
+<button (click)="mostrarListado = !mostrarListado" class="btn-resultados">Ver resultados de la evaluación</button>
 
-<ul *ngIf="mostrarListado">
-    <li *ngFor="let student of students">
-        {{ student }}
-    </li>
-</ul>
-
-<!-- hacer un ng class para que cambien de color los aprobados -->
-<!-- hacer un ngif para que muestre solo los aprobados -->
-
-<ul *ngIf="mostrarListado">
-    <li *ngFor="let student of example">
-        {{ student.name }} - {{ student.aprobado }}
-    </li>
-</ul>
-
-<div [ngClass]="hasError ? 'error': 'success'">Prueba de Ng Class</div>
-
-<button (click)="alternarError()" [disabled]="!isDisabled">Click me!</button>
-
-<p>Pipe</p>
-<p>{{ birthdayStudents | date: 'dd/MM/yy' }}</p>
+<div *ngIf="mostrarListado" class="students-ctn">
+    <div *ngFor="let student of students" class="students-card">
+        <div class="student-card">
+            <p style="padding-right: 6px; text-decoration: underline;">Alumno</p>
+            <p style="font-weight: 300;">{{ student.name }}</p>
+        </div>
+        <div class="student-card">
+            <p style="padding-right: 6px; text-decoration: underline;">DNI</p>
+            <p style="font-weight: 300;">{{ student.dni }}</p>
+        </div>
+        <div class="student-card">
+            <p style="padding-right: 6px; text-decoration: underline;">Edad</p>
+            <p style="font-weight: 300;">{{ student.age }}</p>
+        </div>
+        <div class="student-card">
+            <p style="padding-right: 6px; text-decoration: underline;">Género</p>
+            <p style="font-weight: 300;">{{ student.gender }}</p>
+        </div>
+        <div class="student-card">
+            <p style="padding-right: 6px; text-decoration: underline;">Resultado</p>
+            <p [ngClass]="{'success': student.aprobado, 'error': !student.aprobado}" style="font-style: italic;">
+                <strong>{{ (student.aprobado ? 'Aprobado' : 'No aprobado') | uppercase }}</strong>
+            </p>
+        </div>
+    </div>
+</div>

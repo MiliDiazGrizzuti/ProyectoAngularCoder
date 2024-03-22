@@ -8,42 +8,51 @@ import { Component } from '@angular/core';
 export class StudentsComponent {
   title = 'Cursos';
 
-  hasError = false;
-
-  isDisabled = true;
-
-  students = ['Rick', 'Daryl', 'Michonne', 'Maggie', 'Glenn'];
-
-  example = [
+  students = [
     {
       name: 'Rick',
+      dni: 25456789,
+      age: 45,
+      gender: 'Masculino',
       aprobado: true
     },
     {
       name: 'Daryl',
+      dni: 18593579,
+      age: 50,
+      gender: 'Masculino',
       aprobado: false
     },
     {
       name: 'Michonne',
+      dni: 28154685,
+      age: 42,
+      gender: 'Femenino',
       aprobado: true
     },
     {
       name: 'Maggie',
+      dni: 31478365,
+      age: 38,
+      gender: 'Femenino',
       aprobado: true
     },
     {
       name: 'Glenn',
+      dni: 31578241,
+      age: 38,
+      gender: 'Masculino',
       aprobado: false
-    }]
+    },
+    {
+    name: 'Negan',
+    dni: 24777895,
+    age: 46,
+    gender: 'Masculino',
+    aprobado: true
+  }];
 
   mostrarListado = false;
-
-  birthdayStudents = new Date(1995, 5, 28);
-
-  alternarError () {
-    this.hasError = !this.hasError;
-  }
-
 
 }
 

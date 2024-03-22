@@ -30,10 +30,57 @@ h3 {
 }
 
 
+.btn-resultados {
+    background-color: #016804;
+    text-align: center;
+    border: none;
+    border-radius: 12px;
+    padding: 5px 10px 5px 10px;
+    margin: 15px;
+    cursor: pointer;
+    color: #ffae5e;
+}
+    
+.btn-resultados:hover {
+    background-color: #d16600;
+    color: #e7e7e7;
+}
+
+
+
+.students-ctn {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+
+.students-card {
+    background-color: #d16600;
+    color: #e7e7e7;
+    padding: 14px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.students-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.student-card {
+    display: flex;
+}
+
+// NgClass
+
 .success {
-    background-color: #076d35;
+    color: #076d35;
 }
 
 .error {
-    background-color: #950000;
+    color: #950000;
 }
+
