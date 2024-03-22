@@ -1,9 +1,25 @@
-<header>
-  <h1 class="brand">Marca</h1>
-</header>
+<div class="layout">
+  <div class="toolbar-ctn">
+    <app-tool-bar></app-tool-bar>
+  </div>
+  <div class="navbar-students-ctn">
+    <img src="../assets/images/fondo-pantalla-principal.jpg" class="background-image" alt="Estudiá sin moverte de tu casa">
+    <div class="navbar-ctn">
+      <app-nav-bar></app-nav-bar>
+    </div>
+    <div class="students-ctn">
+      <app-students></app-students>
+    </div>
+  </div>
+</div>
 
-<h1>Hola Angular 💖</h1>
-<p>¡Esta es una plataforma de {{ title }}!<p>
+<footer class="footer">
+  <p>Seguinos en:</p>
+  <div class="redes-sociales-ctn">
+    <a href="https://instagram.com" target="_blank">Instagram</a>
+    <a href="https://facebook.com" target="_blank">Facebook</a>
+    <a href="https://tiktok.com" target="_blank">Tik Tok</a>
+  </div>
+</footer>
 
-  
 <router-outlet />

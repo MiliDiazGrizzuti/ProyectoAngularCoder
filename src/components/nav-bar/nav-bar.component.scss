@@ -1,0 +1,21 @@
+.btn-ctn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar-btn {
+    background-color: #d16600;
+    text-align: center;
+    border: none;
+    border-radius: 12px;
+    padding: 5px;
+    margin-bottom: 10px;
+    width: 80%;
+    cursor: pointer;
+    color: #512800;
+}
+
+.navbar-btn:hover {
+    background-color: #fedda7;
+}

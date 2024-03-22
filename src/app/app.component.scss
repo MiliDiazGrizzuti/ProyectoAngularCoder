@@ -1,3 +1,85 @@
-.brand {
-    font-family: "Truculenta", sans-serif;
+// Layout
+
+.layout {
+    text-align: center;
 }
+
+// Layout - Tool Bar
+
+.toolbar-ctn {
+    color: #00563F;
+    padding: 15px;
+}
+
+// Layout - Nav Bar y Students Component
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.navbar-students-ctn {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar-ctn {
+    background-color: #ffa34a;
+    color: #e7e7e7;
+    width: 15%;
+    border-radius: 15px;
+    padding: 15px;
+    position: relative;
+    top: 50%;
+    font-size: 0.9rem;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.students-ctn {
+    background-color: #ffa34a;
+    color: #e7e7e7;
+    width: 70%;
+    border-radius: 15px;
+    padding: 15px;
+    position: relative;
+    top: 50%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+// Footer
+
+.footer {
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+.redes-sociales-ctn {
+    display: flex;
+    padding: 10px;
+}
+
+.redes-sociales-ctn a {
+    margin-right: 10px;
+    padding: 10px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: #954900;
+    background-color: #ffa34a;
+    border-radius: 12px;
+    align-items: center;
+}
+
+.redes-sociales-ctn a:hover {
+    background-color: #d16600;
+    color: #e7e7e7;
+}
+
