@@ -1,12 +1,16 @@
 import { Component } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-tool-bar',
-  templateUrl: './tool-bar.component.html',
-  styleUrl: './tool-bar.component.scss'
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrl: './dashboard.component.scss'
 })
-export class ToolBarComponent {
+
+export class DashboardComponent {
+  showFiller = false;
 
   isFormOpen: boolean = false;
 
@@ -36,6 +40,10 @@ export class ToolBarComponent {
     } else {
       console.log('Formulario inválido. Por favor, revise los campos.');
     }
+  }
+
+  isMobile () : boolean {
+    return window.innerWidth < 768;
   }
 
 }
