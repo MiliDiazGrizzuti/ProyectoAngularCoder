@@ -11,6 +11,9 @@ import { MatButtonModule } from '@angular/material/button';
 
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { StudentsModule } from './pages/students/students.module';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +27,9 @@ import { StudentsModule } from './pages/students/students.module';
     MatIconModule,
     MatButtonModule,
     ReactiveFormsModule,
-    StudentsModule
+    StudentsModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   exports: [
     DashboardComponent

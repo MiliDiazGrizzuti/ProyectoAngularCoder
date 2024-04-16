@@ -33,13 +33,10 @@ export class DashboardComponent {
     this.isFormOpen = false;
   }
 
-  submit() {
+  onSave() {
     if (this.studentForm.valid) {
-      console.log('Formulario válido. Enviar datos...');
-      this.closeForm();
-    } else {
-      console.log('Formulario inválido. Por favor, revise los campos.');
-    }
+      const formData = this.studentForm.value;
+  }
   }
 
   isMobile () : boolean {

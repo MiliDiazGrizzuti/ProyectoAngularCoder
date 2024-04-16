@@ -5,13 +5,14 @@ import { StudentsComponent } from './students.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTableModule } from '@angular/material/table';
 import { MatDialogModule } from '@angular/material/dialog';
-import { StudentDialogComponent } from './components/student-dialog/student-dialog.component';
 import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+
 
 @NgModule({
   declarations: [
-    StudentsComponent,
-    StudentDialogComponent
+    StudentsComponent
   ],
   imports: [
     CommonModule,
@@ -19,7 +20,9 @@ import { MatButtonModule } from '@angular/material/button';
     MatToolbarModule,
     MatTableModule,
     MatDialogModule,
-    MatButtonModule
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   exports: [
     StudentsComponent

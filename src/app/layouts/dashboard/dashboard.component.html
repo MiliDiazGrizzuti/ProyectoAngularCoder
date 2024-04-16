@@ -4,7 +4,7 @@
     <mat-drawer #drawer class="sidenav" [mode]="isMobile() ? 'over' : 'side'">
         <div class="btn-ctn-sidenav">
             @if (showFiller) {
-                <p>Lorem, ipsum dolor sit amet consectetur.</p>
+                <p>Contenido extra</p>
             }
             <button class="navbar-btn" (click)="showFiller = !showFiller" mat-raised-button>Cursos</button>
             <button class="navbar-btn" (click)="showFiller = !showFiller" mat-raised-button>Preguntas frecuentes</button>
@@ -25,35 +25,84 @@
             <div class="btn-ctn">
                 <button class="toolbar-btn">Iniciar sesión</button>
                 <button (click)="openForm()" class="toolbar-btn">Registrarme</button>
+                
             </div>
         </mat-toolbar>
         
         <!-- POPUP REGISTRO -->
         <div class="popup-ctn" [ngClass]="{ 'show-popup': isFormOpen }">
             <div class="popup">
-                <form [formGroup]="studentForm" (ngSubmit)="submit()">
+                <form [formGroup]="studentForm" (ngSubmit)="onSave()">
                     <div class="title-popup">
-                        <p style="font-size: 1.1em;">Complete sus datos para registrarse:</p>
+                        <p mat-dialog-title style="font-size: 1.1em;">Complete sus datos para registrarse:</p>
                         <p (click)="closeForm()" style="cursor: pointer;">X</p>
                     </div>
-                    <input type="text" formControlName="name" placeholder="Ingrese su nombre" required>
-                    <span id="text-error" *ngIf="studentForm.get('name')?.touched && studentForm.get('name')?.errors?.['required']">*El nombre no puede estar vacío</span>
-                    
-                    <input type="text" formControlName="lastname" placeholder="Ingrese su apellido" required>
-                    <span id="text-error" *ngIf="studentForm.get('lastname')?.touched && studentForm.get('lastname')?.errors?.['required']">*El apellido no puede estar vacío</span>
-                    
-                    <input type="number" formControlName="age" min="18" placeholder="Ingrese su edad">
-                    
-                    <input type="text" formControlName="nationality" placeholder="Ingrese su nacionalidad">
-                    
-                    <input type="email" formControlName="email" placeholder="Ingrese su correo electrónico" required>
-                    <span id="text-error" *ngIf="studentForm.get('email')?.touched && studentForm.get('email')?.errors?.['required']">*El correo electrónico no puede estar vacío</span>
-                    <span id="text-error" *ngIf="studentForm.get('email')?.touched && studentForm.get('email')?.errors?.['email']">*El correo electrónico no es válido</span>
-                    
-                    <textarea rows="10" cols="70" formControlName="mensaje" placeholder="Escriba un mensaje adicional"></textarea>
-                    <div id="text-error" *ngIf="this.studentForm.get('mensaje')?.errors?.['maxlength']">*Haz alcanzado el máximo de caracteres (500)</div>
-                    
-                    <button type="submit" [disabled]="!studentForm.valid" class="toolbar-btn">Registrarme</button>
+                    <div class="row">
+                        <div class="col-6">
+                            <mat-form-field appearance="fill">
+                                <mat-label class="mat-label-text">Nombre</mat-label>
+                                <input matInput type="text" formControlName="name" required>
+                                <mat-hint id="text-error" *ngIf="studentForm.get('name')?.touched && studentForm.get('name')?.errors?.['required']">
+                                    *El nombre no puede estar vacío
+                                </mat-hint>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-6">
+                            <mat-form-field appearance="fill">
+                                <mat-label class="mat-label-text">Apellido</mat-label>
+                                <input matInput type="text" formControlName="lastname" required>
+                                <mat-hint id="text-error" *ngIf="studentForm.get('lastname')?.touched && studentForm.get('lastname')?.errors?.['required']">
+                                    *El apellido no puede estar vacío
+                                </mat-hint>
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <mat-form-field appearance="fill">
+                                <mat-label class="mat-label-text">Edad</mat-label>
+                                <input matInput type="number" formControlName="age" min="18">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-6">
+                            <mat-form-field appearance="fill">
+                                <mat-label class="mat-label-text">Nacionalidad</mat-label>
+                                <input matInput type="text" formControlName="nationality">
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-6">
+                            <mat-form-field appearance="fill">
+                                <mat-label class="mat-label-text">Email</mat-label>
+                                <input matInput type="email" formControlName="email" required>
+                                <mat-hint id="text-error" *ngIf="studentForm.get('email')?.touched && studentForm.get('email')?.errors?.['required']">
+                                    *El correo electrónico no puede estar vacío
+                                </mat-hint>
+                                <mat-hint id="text-error" *ngIf="studentForm.get('email')?.touched && studentForm.get('email')?.errors?.['email']">
+                                    *El correo electrónico no es válido
+                                </mat-hint>
+                            </mat-form-field>
+                        </div>
+
+                        <div class="col-6">
+                            <mat-form-field appearance="fill">
+                                <mat-label class="mat-label-text">Escriba un mensaje adicional</mat-label>
+                                <textarea matInput rows="10" cols="70" formControlName="mensaje"></textarea>
+                                <mat-hint id="text-error" *ngIf="this.studentForm.get('mensaje')?.errors?.['maxlength']">
+                                    *Haz alcanzado el máximo de caracteres (500)
+                                </mat-hint>
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                    <div mat-dialog-actions>
+                        <button mat-button (click)="onSave()" type="submit" [disabled]="!studentForm.valid" class="toolbar-btn">Registrarme</button>
+                        <button mat-button (click)="closeForm()" class="toolbar-btn">Cancelar</button>
+                    </div>
                 </form>
             </div>
         </div>

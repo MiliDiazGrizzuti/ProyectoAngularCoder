@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IStudent } from './models';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-students',
@@ -71,5 +72,6 @@ export class StudentsComponent {
       createdAt: new Date()
     },
   ];
+
 
 }
