@@ -1,6 +1,12 @@
+.mat-elevation-z8 {
+    background-color: #ffeac8;
+    border-radius: 18px;
+    margin-left: 25px;
+}
+
 h3 {
     margin: 0;
-    color: #954900;
+    color: #d16600;
 }
 
 .title {
@@ -10,7 +16,9 @@ h3 {
 
 .subtitle {
     padding-bottom: 20px;
-    color: #954900;
+    color: #d16600
+    ;
+    padding-left: 15px;
 }
 
 .card-ctn {
@@ -21,7 +29,7 @@ h3 {
 
 .card {
     background-color: #d16600;
-    color: #e7e7e7;
+    color: #6c3600;
     border-radius: 10px;
     padding: 15px;
     font-size: 1rem;
@@ -73,6 +81,7 @@ h3 {
 .student-card {
     display: flex;
 }
+
 
 // NgClass
 

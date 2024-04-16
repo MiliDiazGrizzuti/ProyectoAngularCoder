@@ -1,9 +1,3 @@
-// Layout
-
-.layout {
-    text-align: center;
-}
-
 // Layout - Tool Bar
 
 .toolbar-ctn {
@@ -27,32 +21,20 @@
     justify-content: space-around;
     position: relative;
     overflow: hidden;
+    text-align: center;
 }
 
-.navbar-ctn {
-    background-color: #ffa34a;
-    color: #e7e7e7;
-    width: 15%;
-    border-radius: 15px;
-    padding: 15px;
-    position: relative;
-    top: 50%;
-    font-size: 0.9rem;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-.students-ctn {
-    background-color: #ffa34a;
-    color: #e7e7e7;
-    width: 70%;
-    border-radius: 15px;
-    padding: 15px;
-    position: relative;
-    top: 50%;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
+// .students-ctn {
+//     background-color: #ffa34a;
+//     color: #e7e7e7;
+//     width: 70%;
+//     border-radius: 15px;
+//     padding: 15px;
+//     position: relative;
+//     top: 50%;
+//     margin-top: 30px;
+//     margin-bottom: 30px;
+// }
 
 
 // Footer
@@ -82,4 +64,3 @@
     background-color: #d16600;
     color: #e7e7e7;
 }
-
