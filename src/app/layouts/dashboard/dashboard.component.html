@@ -32,7 +32,7 @@
         <!-- POPUP REGISTRO -->
         <div class="popup-ctn" [ngClass]="{ 'show-popup': isFormOpen }">
             <div class="popup">
-                <form [formGroup]="studentForm" (ngSubmit)="onSave()">
+                <form [formGroup]="studentForm">
                     <div class="title-popup">
                         <p mat-dialog-title style="font-size: 1.1em;">Complete sus datos para registrarse:</p>
                         <p (click)="closeForm()" style="cursor: pointer;">X</p>
@@ -75,8 +75,8 @@
 
                     <div class="row">
 
-                        <div class="col-6">
-                            <mat-form-field appearance="fill">
+                        <div class="col-4">
+                            <mat-form-field class="w-100" appearance="fill">
                                 <mat-label class="mat-label-text">Email</mat-label>
                                 <input matInput type="email" formControlName="email" required>
                                 <mat-hint id="text-error" *ngIf="studentForm.get('email')?.touched && studentForm.get('email')?.errors?.['required']">
@@ -88,8 +88,18 @@
                             </mat-form-field>
                         </div>
 
-                        <div class="col-6">
-                            <mat-form-field appearance="fill">
+                        <div class="col-4">
+                            <mat-form-field class="w-100" appearance="fill">
+                                <mat-label class="mat-label-text">Role</mat-label>
+                                <mat-select formControlName="role">
+                                    <mat-option value="admin">Administrador</mat-option>
+                                    <mat-option value="user">Usuario</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+
+                        <div class="col-4">
+                            <mat-form-field class="w-100" appearance="fill">
                                 <mat-label class="mat-label-text">Escriba un mensaje adicional</mat-label>
                                 <textarea matInput rows="10" cols="70" formControlName="mensaje"></textarea>
                                 <mat-hint id="text-error" *ngIf="this.studentForm.get('mensaje')?.errors?.['maxlength']">
@@ -109,7 +119,7 @@
         <!-- FINPOPUP REGISTRO -->
         <!-- FIN TOOLBAR SUPERIOR -->
 
-        <app-students/>
+        <app-students (openFormEvent)="openForm()"></app-students>
 
     </div>
     <!-- FIN CONTENIDO A LA DERECHA DEL SIDEBAR -->

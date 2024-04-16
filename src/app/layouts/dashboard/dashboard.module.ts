@@ -4,15 +4,9 @@ import { CommonModule } from '@angular/common';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { StudentsModule } from './pages/students/students.module';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
+import { SharedModule } from '../../shared/shared.module';
 
 
 @NgModule({
@@ -22,14 +16,9 @@ import { MatInputModule } from '@angular/material/input';
   imports: [
     CommonModule,
     DashboardRoutingModule,
-    MatSidenavModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatButtonModule,
     ReactiveFormsModule,
     StudentsModule,
-    MatFormFieldModule,
-    MatInputModule
+    SharedModule
   ],
   exports: [
     DashboardComponent

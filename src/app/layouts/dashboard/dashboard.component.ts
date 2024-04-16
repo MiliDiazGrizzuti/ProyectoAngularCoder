@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSidenavModule } from '@angular/material/sidenav';
+import { Component, ViewChild } from '@angular/core';
 import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { StudentsComponent } from './pages/students/students.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,8 +9,9 @@ import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms'
 })
 
 export class DashboardComponent {
+  @ViewChild(StudentsComponent) private studentsComponent!: StudentsComponent;
+  
   showFiller = false;
-
   isFormOpen: boolean = false;
 
   constructor(private fb: FormBuilder) { }
@@ -22,7 +22,8 @@ export class DashboardComponent {
     age: [''],
     nationality: [''],
     email: ['', [Validators.required, Validators.email]],
-    mensaje: ['', [Validators.required, Validators.maxLength(500)]]
+    mensaje: ['', [Validators.maxLength(500)]],
+    role: ['user', [Validators.required]],
   });
 
   openForm() {
@@ -36,7 +37,10 @@ export class DashboardComponent {
   onSave() {
     if (this.studentForm.valid) {
       const formData = this.studentForm.value;
-  }
+      this.studentsComponent.addStudent(formData);
+      console.log(formData);
+      this.closeForm(); // Cierra el formulario después de agregar el estudiante
+    }
   }
 
   isMobile () : boolean {

@@ -1,3 +1,5 @@
+export type UserRole = 'admin' | 'user';
+
 export interface IStudent {
     id: number;
     firstName: string;
@@ -6,5 +8,6 @@ export interface IStudent {
     age: number;
     gender: string;
     approved: boolean;
+    role: UserRole; 
     createdAt: Date;
 }

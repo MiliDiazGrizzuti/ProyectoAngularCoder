@@ -1,14 +1,16 @@
-import { Component } from '@angular/core';
-import { IStudent } from './models';
-import { MatDialog } from '@angular/material/dialog';
+import { Component, Output, EventEmitter } from '@angular/core';
+import { IStudent, UserRole } from './models';
+import { ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-students',
   templateUrl: './students.component.html',
   styleUrl: './students.component.scss'
 })
+
 export class StudentsComponent {
-  displayedColumns: string[] = ['id', 'firstName', 'lastName', 'email', 'approved'];
+
+  displayedColumns: string[] = ['id', 'firstName', 'lastName', 'email', 'role', 'approved', 'actions'];
 
   students: IStudent[] = [
     {
@@ -19,6 +21,7 @@ export class StudentsComponent {
       age: 48,
       gender: 'Masculino',
       approved: true,
+      role: 'admin',
       createdAt: new Date()
     },
     {
@@ -29,6 +32,7 @@ export class StudentsComponent {
       age: 52,
       gender: 'Masculino',
       approved: true,
+      role: 'admin',
       createdAt: new Date()
     },
     {
@@ -39,6 +43,7 @@ export class StudentsComponent {
       age: 40,
       gender: 'Femenino',
       approved: false,
+      role: 'user',
       createdAt: new Date()
     },
     {
@@ -49,6 +54,7 @@ export class StudentsComponent {
       age: 38,
       gender: 'Femenino',
       approved: true,
+      role: 'user',
       createdAt: new Date()
     },
     {
@@ -59,6 +65,7 @@ export class StudentsComponent {
       age: 38,
       gender: 'Masculino',
       approved: false,
+      role: 'user',
       createdAt: new Date()
     },
     {
@@ -69,9 +76,43 @@ export class StudentsComponent {
       age: 46,
       gender: 'Masculino',
       approved: false,
+      role: 'user',
       createdAt: new Date()
     },
   ];
 
+  @Output() openFormEvent = new EventEmitter<void>();
+
+  constructor(private cdr: ChangeDetectorRef) { }
+
+  userRoleSession: UserRole = 'admin'; //si le cambio a user, no se va a ver el botón de eliminar
+
+  addStudent(formData: any) {
+    const newStudent: IStudent = {
+      id: Math.floor(Math.random() * 100000), // genera un ID aleatorio
+      firstName: formData.name,
+      lastName: formData.lastname,
+      email: formData.email,
+      age: formData.age,
+      gender: formData.gender,
+      approved: false, // por default, el nuevo estudiante no está aprobado
+      role: formData.role as UserRole,
+      createdAt: new Date()
+    };
+
+    this.students = [...this.students, newStudent];  // agrega el nuevo estudiante a la tabla
+    this.cdr.detectChanges(); // lo tuve que buscar porque no mostraba al nuevo registro en la tabla
+    console.log(this.students);
+  }
+
+  onDeleteStudent(id: number): void {
+    if (confirm('¿Está seguro que desea eliminar este estudiante?')) {
+    this.students = this.students.filter(student => student.id !== id);
+    }
+  }
+
+  openForm() {
+    this.openFormEvent.emit();
+  }
 
 }
