@@ -1,0 +1,6 @@
+<div *ngFor="let item of items | studentOrder: studentOrderAlphabetical && studentOrderLength">
+    {{ item }}
+</div>
+
+<button (click)="changeStudentOrderAlphabetical('alphabetical')">Ordenar alfabéticamente</button>
+<button (click)="changeStudentOrderLength('length')">Ordenar por longitud</button>

@@ -1,6 +1,8 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { IStudent, UserRole } from './models';
 import { ChangeDetectorRef } from '@angular/core';
+import { StudentOrderPipe } from '../pipes-y-directivas/student-order.pipe';
+
 
 @Component({
   selector: 'app-students',

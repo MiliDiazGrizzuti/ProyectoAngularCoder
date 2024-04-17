@@ -7,6 +7,7 @@ import { DashboardComponent } from './dashboard.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { StudentsModule } from './pages/students/students.module';
 import { SharedModule } from '../../shared/shared.module';
+import { PipesYDirectivasModule } from './pages/pipes-y-directivas/pipes-y-directivas.module';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { SharedModule } from '../../shared/shared.module';
     DashboardRoutingModule,
     ReactiveFormsModule,
     StudentsModule,
-    SharedModule
+    SharedModule,
+    PipesYDirectivasModule
   ],
   exports: [
     DashboardComponent
