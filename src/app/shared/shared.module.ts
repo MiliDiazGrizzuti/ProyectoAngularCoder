@@ -9,6 +9,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSelectModule } from '@angular/material/select';
+import { PipesYDirectivasModule } from './pipes-y-directivas/pipes-y-directivas.module';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { MatSelectModule } from '@angular/material/select';
     MatInputModule,
     MatToolbarModule,
     MatIconModule,
-    MatSelectModule
+    MatSelectModule,
+    PipesYDirectivasModule
   ]
 })
 

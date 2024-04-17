@@ -16,7 +16,8 @@ import { StudentOrderPipe } from './student-order.pipe';
     PipesYDirectivasRoutingModule
   ],
   exports: [
-    PipesYDirectivasComponent
+    PipesYDirectivasComponent,
+    StudentOrderPipe
   ]
 })
 export class PipesYDirectivasModule { }
