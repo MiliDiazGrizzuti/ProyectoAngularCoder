@@ -4,6 +4,23 @@
     margin-left: 25px;
 }
 
+.mat-mdc-table tbody,
+.mat-mdc-table tfoot,
+.mat-mdc-table thead,
+.mat-mdc-cell,
+.mat-mdc-footer-cell,
+.mat-mdc-header-row,
+.mat-mdc-row,
+.mat-mdc-footer-row,
+.mat-mdc-table
+.mat-mdc-header-cell {
+    color: #9c4c00;
+}
+
+.mat-mdc-header-cell {
+    font-weight: bold;
+}
+
 h3 {
     margin: 0;
     color: #d16600;
