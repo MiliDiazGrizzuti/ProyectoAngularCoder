@@ -8,11 +8,13 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { StudentsModule } from './pages/students/students.module';
 import { SharedModule } from '../../shared/shared.module';
 import { PipesYDirectivasModule } from '../../shared/pipes-y-directivas/pipes-y-directivas.module';
+import { ClassesComponent } from './pages/classes/classes.component';
 
 
 @NgModule({
   declarations: [
-    DashboardComponent
+    DashboardComponent,
+    ClassesComponent
   ],
   imports: [
     CommonModule,

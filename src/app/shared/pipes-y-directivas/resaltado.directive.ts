@@ -9,6 +9,7 @@ export class ResaltadoDirective {
     this.elementRef.nativeElement.style.backgroundColor = 'yellow';
     this.elementRef.nativeElement.style.color = 'red';
     this.elementRef.nativeElement.style.fontWeight = 'bold';
+    this.elementRef.nativeElement.style.fontSize = '20px';
   }
 
 }

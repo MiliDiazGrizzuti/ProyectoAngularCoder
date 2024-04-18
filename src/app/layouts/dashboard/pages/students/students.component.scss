@@ -110,3 +110,20 @@ h3 {
     color: #950000;
 }
 
+
+.student-btn {
+    background-color: #d16600;
+    text-align: center;
+    border: none;
+    border-radius: 12px;
+    padding: 5px 11px 5px 11px;
+    margin: 15px;
+    margin-top: 30px;
+    cursor: pointer;
+    color: #6c3600;
+    font-weight: 500;
+}
+
+.student-btn:hover {
+    background-color: #ffa34a;
+}
