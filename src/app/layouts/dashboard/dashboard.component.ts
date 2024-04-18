@@ -34,6 +34,31 @@ export class DashboardComponent {
     this.isFormOpen = false;
   }
 
+  get nameControl() {
+    return this.studentForm.get('name');
+  }
+
+  get lastNameControl() {
+    return this.studentForm.get('lastname');
+  }
+
+  get ageControl() {
+    return this.studentForm.get('age');
+  }
+
+  get nationalityControl() {
+    return this.studentForm.get('nationality');
+  }
+
+  get emailControl() {
+    return this.studentForm.get('email');
+  }
+
+  get messageControl() {
+    return this.studentForm.get('mensaje');
+  }
+
+
   onSave() {
     if (this.studentForm.valid) {
       const formData = this.studentForm.value;

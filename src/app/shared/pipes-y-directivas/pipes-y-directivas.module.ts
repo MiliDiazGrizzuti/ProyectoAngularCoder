@@ -3,13 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { PipesYDirectivasRoutingModule } from './pipes-y-directivas-routing.module';
 import { PipesYDirectivasComponent } from './pipes-y-directivas.component';
-import { StudentOrderPipe } from './student-order.pipe';
+import { ValidatorPipe } from './validator.pipe';
 
 
 @NgModule({
   declarations: [
     PipesYDirectivasComponent,
-    StudentOrderPipe
+    ValidatorPipe
   ],
   imports: [
     CommonModule,
@@ -17,7 +17,7 @@ import { StudentOrderPipe } from './student-order.pipe';
   ],
   exports: [
     PipesYDirectivasComponent,
-    StudentOrderPipe
+    ValidatorPipe
   ]
 })
 export class PipesYDirectivasModule { }
