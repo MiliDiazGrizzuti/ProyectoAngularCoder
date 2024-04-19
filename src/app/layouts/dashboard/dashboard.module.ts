@@ -9,6 +9,7 @@ import { StudentsModule } from './pages/students/students.module';
 import { SharedModule } from '../../shared/shared.module';
 import { PipesYDirectivasModule } from '../../shared/pipes-y-directivas/pipes-y-directivas.module';
 import { ClassesComponent } from './pages/classes/classes.component';
+import { CoursesModule } from './pages/courses/courses.module';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { ClassesComponent } from './pages/classes/classes.component';
     ReactiveFormsModule,
     StudentsModule,
     SharedModule,
-    PipesYDirectivasModule
+    PipesYDirectivasModule,
+    CoursesModule
   ],
   exports: [
     DashboardComponent
