@@ -1,9 +1,9 @@
 
 <h3 class="title">Estos son nuestros cursos!</h3>
 
-<button class="student-btn">Crear producto</button>
+<!-- <button class="student-btn">Crear producto</button> -->
 
-<table mat-table [dataSource]="courses" class="mat-elevation-z8">
+<table mat-table *ngIf="(courses$ | async) as courses" [dataSource]="courses" class="mat-elevation-z8">
 
     <ng-container matColumnDef="id">
     <th mat-header-cell *matHeaderCellDef> No: </th>
