@@ -44,7 +44,9 @@
                 <form [formGroup]="studentForm">
                     <div class="title-popup">
                         <p mat-dialog-title style="font-size: 1.1em;">Complete sus datos para registrarse:</p>
-                        <p (click)="closeForm()" style="cursor: pointer;">X</p>
+                        <p (click)="closeForm()" style="cursor: pointer;">
+                            <mat-icon>close</mat-icon>
+                        </p>
                     </div>
                     <div class="form-ctn">
                         <div class="">
