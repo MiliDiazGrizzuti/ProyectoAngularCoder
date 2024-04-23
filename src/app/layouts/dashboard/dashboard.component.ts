@@ -1,6 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
-import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormBuilder, Validators } from '@angular/forms';
 import { StudentsComponent } from './pages/students/students.component';
+import { Observable } from 'rxjs';
+import { IStudent } from './pages/students/models';
+import { AuthService } from './pages/students/auth.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -14,7 +17,11 @@ export class DashboardComponent {
   showFiller = false;
   isFormOpen: boolean = false;
 
-  constructor(private fb: FormBuilder) { }
+  authUser$: Observable<IStudent | null>;
+
+  constructor(private fb: FormBuilder, private authService: AuthService) {
+    this.authUser$ = this.authService.authUser$;
+  }
 
   studentForm = this.fb.group({
     name: ['', [Validators.required]],
@@ -70,6 +77,18 @@ export class DashboardComponent {
 
   isMobile () : boolean {
     return window.innerWidth < 768;
+  }
+
+  login(): void {
+    this.authService.login();
+  }
+
+  logout(): void {
+    this.authService.logout();
+  }
+
+  isLoggedIn(): boolean {
+    return this.authService.isLoggedIn();
   }
 
 }

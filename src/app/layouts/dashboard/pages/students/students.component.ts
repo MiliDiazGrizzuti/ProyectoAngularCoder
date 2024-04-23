@@ -1,7 +1,6 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { IStudent, UserRole } from './models';
 import { ChangeDetectorRef } from '@angular/core';
-import { ValidatorPipe } from '../../../../shared/pipes-y-directivas/validator.pipe';
 
 @Component({
   selector: 'app-students',
@@ -84,7 +83,8 @@ export class StudentsComponent {
 
   @Output() openFormEvent = new EventEmitter<void>();
 
-  constructor(private cdr: ChangeDetectorRef) { }
+  constructor(private cdr: ChangeDetectorRef) {
+  }
 
   userRoleSession: UserRole = 'admin'; //si le cambio a user, no se va a ver el botón de eliminar
 
