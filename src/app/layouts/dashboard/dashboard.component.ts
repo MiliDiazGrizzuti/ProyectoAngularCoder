@@ -3,7 +3,7 @@ import { FormControl, FormBuilder, Validators } from '@angular/forms';
 import { StudentsComponent } from './pages/students/students.component';
 import { Observable } from 'rxjs';
 import { IStudent } from './pages/students/models';
-import { AuthService } from './pages/students/auth.service';
+import { AuthService } from '../auth/auth.service';
 
 @Component({
   selector: 'app-dashboard',

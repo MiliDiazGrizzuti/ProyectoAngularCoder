@@ -1,0 +1,31 @@
+// Footer
+
+.footer {
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+.title-footer {
+    color: #d16600;
+}
+
+.redes-sociales-ctn {
+    display: flex;
+    padding: 10px;
+}
+
+.redes-sociales-ctn a {
+    margin-right: 10px;
+    padding: 10px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: #954900;
+    background-color: #ffa34a;
+    border-radius: 12px;
+    align-items: center;
+}
+
+.redes-sociales-ctn a:hover {
+    background-color: #d16600;
+    color: #e7e7e7;
+}

@@ -10,12 +10,15 @@ import { SharedModule } from '../../shared/shared.module';
 import { PipesYDirectivasModule } from '../../shared/pipes-y-directivas/pipes-y-directivas.module';
 import { ClassesComponent } from './pages/classes/classes.component';
 import { CoursesModule } from './pages/courses/courses.module';
+import { FooterComponent } from '../footer/footer.component';
+import { HomeComponent } from './pages/home/home.component';
 
 
 @NgModule({
   declarations: [
     DashboardComponent,
-    ClassesComponent
+    ClassesComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
@@ -30,4 +33,5 @@ import { CoursesModule } from './pages/courses/courses.module';
     DashboardComponent
   ]
 })
+
 export class DashboardModule { }
