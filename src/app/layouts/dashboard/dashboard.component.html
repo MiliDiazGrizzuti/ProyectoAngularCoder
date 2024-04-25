@@ -3,14 +3,12 @@
     <!-- SIDEBAR -->
     <mat-drawer #drawer class="sidenav" [mode]="isMobile() ? 'over' : 'side'">
         <div class="btn-ctn-sidenav">
-            @if (showFiller) {
-                <p>Contenido extra</p>
-            }
-            <button class="navbar-btn" (click)="showFiller = !showFiller" mat-raised-button>Inicio</button>
-            <button class="navbar-btn" (click)="showFiller = !showFiller" mat-raised-button>Cursos</button>
-            <button class="navbar-btn" (click)="showFiller = !showFiller" mat-raised-button>Clases</button>
-            <button class="navbar-btn" (click)="showFiller = !showFiller" mat-raised-button>Preguntas frecuentes</button>
-            <button class="navbar-btn" (click)="showFiller = !showFiller" mat-raised-button>Contáctanos</button>
+            <button routerLink="home" class="navbar-btn" mat-raised-button>Inicio</button>
+            <button routerLink="courses" class="navbar-btn" mat-raised-button>Cursos</button>
+            <button routerLink="students" class="navbar-btn" mat-raised-button>Alumnos</button>
+            <button routerLink="classes" class="navbar-btn" mat-raised-button>Clases</button>
+            <button class="navbar-btn" mat-raised-button>Preguntas frecuentes</button>
+            <button class="navbar-btn" mat-raised-button>Contáctanos</button>
         </div>
     </mat-drawer>
     <!-- FIN SIDEBAR -->
@@ -137,7 +135,7 @@
         <router-outlet/>
 
         <main>
-
+            <div></div>
         </main>
 
     </div>

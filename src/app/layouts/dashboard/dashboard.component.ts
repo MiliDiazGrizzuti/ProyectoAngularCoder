@@ -14,7 +14,6 @@ import { AuthService } from '../auth/auth.service';
 export class DashboardComponent {
   @ViewChild(StudentsComponent) private studentsComponent!: StudentsComponent;
   
-  showFiller = false;
   isFormOpen: boolean = false;
 
   authUser$: Observable<IStudent | null>;

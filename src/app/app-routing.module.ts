@@ -22,6 +22,7 @@ const routes: Routes = [
   },
   {
     path: '**',
+    //** Hace referencia a cualquier ruta que no sean las anteriores
     component: PageNotFoundComponent
   }
 ];
