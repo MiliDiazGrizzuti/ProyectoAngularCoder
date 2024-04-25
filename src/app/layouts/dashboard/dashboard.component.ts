@@ -4,6 +4,8 @@ import { StudentsComponent } from './pages/students/students.component';
 import { Observable } from 'rxjs';
 import { IStudent } from './pages/students/models';
 import { AuthService } from '../auth/auth.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-dashboard',
@@ -18,7 +20,7 @@ export class DashboardComponent {
 
   authUser$: Observable<IStudent | null>;
 
-  constructor(private fb: FormBuilder, private authService: AuthService) {
+  constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) {
     this.authUser$ = this.authService.authUser$;
   }
 
@@ -84,6 +86,7 @@ export class DashboardComponent {
 
   logout(): void {
     this.authService.logout();
+    this.router.navigate(['auth']);
   }
 
   isLoggedIn(): boolean {

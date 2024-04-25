@@ -14,7 +14,7 @@ import { PageNotFoundComponent } from './layouts/page-not-found/page-not-found.c
   declarations: [
     AppComponent,
     AuthComponent,
-    PageNotFoundComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
