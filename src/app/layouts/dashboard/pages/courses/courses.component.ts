@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CoursesService } from './courses.service';
+import { CoursesService } from '../../../../core/services/courses.service';
 import { ICourse } from './models';
 import { Observable, of, Subject, takeUntil, map } from 'rxjs';
 

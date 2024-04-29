@@ -6,6 +6,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './student-detail.component.html',
   styleUrl: './student-detail.component.scss'
 })
+
 export class StudentDetailComponent {
   constructor(private activatedRoute: ActivatedRoute) {
     this.activatedRoute.params.subscribe({

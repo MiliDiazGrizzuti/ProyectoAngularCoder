@@ -3,7 +3,7 @@ import { FormControl, FormBuilder, Validators } from '@angular/forms';
 import { StudentsComponent } from './pages/students/students.component';
 import { Observable } from 'rxjs';
 import { IStudent } from './pages/students/models';
-import { AuthService } from '../auth/auth.service';
+import { AuthService } from '../../core/services/auth.service';
 import { Router } from '@angular/router';
 
 
