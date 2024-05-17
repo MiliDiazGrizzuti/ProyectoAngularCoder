@@ -10,14 +10,22 @@ import { Observable, of, Subject, takeUntil, map } from 'rxjs';
 })
 
 export class CoursesComponent implements OnInit {
+
+  courses: ICourse[] = [];
+
+  isLoading = false;
+
   displayedColumns = ['id', 'name', 'price', 'actions'];
 
   courses$: Observable<ICourse[]> = of([]);
   private unsubscribe$ = new Subject<void>();
     
-  constructor(private coursesService: CoursesService) {
+  constructor(
+    private coursesService: CoursesService,
+  ) {
   }
   ngOnInit(): void {
+    this.isLoading = true;
     this.coursesService.getCourses()
       .pipe(
         map(courses => courses.map(course => ({ ...course, isNew: course.id % 2 === 0 }))),
@@ -25,10 +33,13 @@ export class CoursesComponent implements OnInit {
       )
       .subscribe(transformedCourses => {
         this.courses$ = of(transformedCourses);
+        this.isLoading = false;
       });
   }
   ngOnDestroy(): void {
     this.unsubscribe$.next();
     this.unsubscribe$.complete();
   }
+
+
 }

@@ -10,6 +10,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSelectModule } from '@angular/material/select';
 import { PipesYDirectivasModule } from './pipes-y-directivas/pipes-y-directivas.module';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatCardModule } from '@angular/material/card';
 
 
 @NgModule({
@@ -27,7 +30,10 @@ import { PipesYDirectivasModule } from './pipes-y-directivas/pipes-y-directivas.
     MatToolbarModule,
     MatIconModule,
     MatSelectModule,
-    PipesYDirectivasModule
+    PipesYDirectivasModule,
+    MatProgressSpinnerModule,
+    ReactiveFormsModule,
+    MatCardModule
   ]
 })
 
